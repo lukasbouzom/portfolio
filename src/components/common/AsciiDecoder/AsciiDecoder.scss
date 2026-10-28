@@ -1,0 +1,12 @@
+@use '@/styles/variables' as vars;
+
+.ascii-decoder {
+  font-family: vars.$font-mono;
+  font-weight: 700;
+  color: vars.$color-text;
+  user-select: none;
+  display: inline-block;
+  white-space: pre;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.25), 0 0 24px rgba(255, 255, 255, 0.1);
+}

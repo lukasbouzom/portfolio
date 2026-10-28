@@ -1,10 +1,12 @@
 <template>
   <main class="home-view">
     <div class="hero-content">
-      <h1 class="nom">Lukas Bouzom</h1>
+      <h1 class="nom">
+        <AsciiDecoder text="Lukas Bouzom" />
+      </h1>
       <p class="portfolio-text">Portfolio</p>
     </div>
-    <div class="bottom-bar"></div>
+    <AsciiGrass class="bottom-grass" />
   </main>
 </template>
 
