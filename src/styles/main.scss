@@ -1,2 +1,8 @@
+@use './variables' as vars;
 @use './reset';
-@use './variables';
+
+body {
+  background-color: vars.$color-bg;
+  color: vars.$color-text;
+  font-family: vars.$font-sans;
+}
