@@ -1,0 +1,38 @@
+@use '@/styles/variables' as vars;
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  box-sizing: border-box;
+  z-index: 10;
+
+  .topbar-brand {
+    font-size: 1rem;
+    font-weight: 600;
+    color: vars.$color-text;
+    text-decoration: none;
+  }
+
+  .topbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .topbar-link {
+      font-size: 0.9rem;
+      color: vars.$color-text-muted;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: vars.$color-text;
+      }
+    }
+  }
+}
