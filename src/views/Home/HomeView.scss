@@ -3,7 +3,32 @@
 .home-view {
   min-height: 100vh;
   position: relative;
+  background-color: vars.$color-bg;
+}
+
+.top-home-page {
+  height: 100vh;
+  width: 100%;
+  position: relative;
   overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(140px, 22vh, 260px);
+    background: linear-gradient(
+      to bottom,
+      rgba(20, 21, 24, 0) 0%,
+      rgba(20, 21, 24, 0.4) 35%,
+      rgba(20, 21, 24, 0.85) 75%,
+      vars.$color-bg 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
 }
 
 .hero-content {
@@ -39,4 +64,27 @@
   height: 100%;
   z-index: 1;
   pointer-events: none;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  background-color: vars.$color-bg;
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+.section-title {
+  font-family: vars.$font-mono;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: vars.$color-text;
+  margin-bottom: 2rem;
 }
